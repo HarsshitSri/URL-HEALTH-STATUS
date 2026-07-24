@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Health Status</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="brand">URL Health Status</p>
+        <h1>Audit any public page</h1>
+        <p class="lede">
+          Enter a URL to fetch HTTP status, timing, title, meta description, H1
+          count, images missing alt text, and approximate word count.
+        </p>
+      </header>
+
+      <form id="audit-form" class="audit-form" novalidate>
+        <label for="url-input">Page URL</label>
+        <div class="row">
+          <input
+            id="url-input"
+            name="url"
+            type="url"
+            placeholder="https://example.com"
+            autocomplete="url"
+            required
+          />
+          <button type="submit" id="submit-btn">Check</button>
+        </div>
+      </form>
+
+      <p id="status" class="status" hidden></p>
+      <p id="error" class="error" hidden></p>
+
+      <section id="report" class="report" hidden>
+        <h2>Report</h2>
+        <dl id="report-fields"></dl>
+      </section>
+
+      <footer class="site-footer">
+        <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer"
+          >Built for Digital Heroes Training Task</a
+        >
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
