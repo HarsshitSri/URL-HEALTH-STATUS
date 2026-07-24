@@ -2,6 +2,10 @@
 
 Small Spring Boot tool that audits any public HTTP(S) URL and returns a JSON page-health report. A simple web UI calls the API and renders the result.
 
+**Live demo:** [https://url-health-status.onrender.com/](https://url-health-status.onrender.com/)
+
+> Free Render tier sleeps after ~15 minutes idle. The first request after sleep can take ~30–60 seconds — refresh once if needed.
+
 ## Setup
 
 ### Prerequisites
@@ -109,7 +113,7 @@ JSON body:
    - **Dockerfile path:** `./Dockerfile`
    - **Instance type:** Free
 5. Create the service and wait for the first deploy.
-6. Open the `*.onrender.com` URL. Free tier sleeps after ~15 minutes idle; the first request after sleep can take ~30–60 seconds while Spring Boot starts — refresh once if needed.
+6. Open the service URL. This project is live at [https://url-health-status.onrender.com/](https://url-health-status.onrender.com/).
 
 Optional: set env var `JAVA_OPTS` in Render if you want different JVM flags (defaults are set in the Dockerfile).
 
